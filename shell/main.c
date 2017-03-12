@@ -19,6 +19,22 @@
 
 #include "config.h"
 
+//todo: set this flag in makefile
+#define HAVE_LIBSECCOMP
+#define USE_PROTECTEDVIEW
+
+#ifdef USE_PROTECTEDVIEW
+#ifndef HAVE_LIBSECCOMP
+#define HAVE_LIBSECCOMP
+#endif /* HAVE_LIBSECCOMP */
+#endif /* USE_PROTECTEDVIEW */
+
+
+#ifdef HAVE_LIBSECCOMP
+#include "libsec.h"
+#endif /* HAVE_LIBSECCOMP */
+
+
 #include <stdlib.h>
 #include <string.h>
 
@@ -229,6 +245,27 @@ load_files (const char **files)
 int
 main (int argc, char *argv[])
 {
+
+#ifdef HAVE_LIBSECCOMP
+
+        if(protectedMode()){
+	    perror("SECCOMP initialisation failed");
+	    exit(EXIT_FAILURE);
+	}
+
+#endif /* HAVE_LIBSECCOMP */
+
+
+#ifdef USE_PROTECTEDVIEW
+
+	if(protectedView()){
+	    perror("SECCOMP initialisation failed");
+	    exit(EXIT_FAILURE);
+	}
+	
+#endif /* USE_PROTECTEDVIEW */
+
+
         EvApplication  *application;
 	GOptionContext *context;
 	GError         *error = NULL;

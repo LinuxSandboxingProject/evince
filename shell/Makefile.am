@@ -71,6 +71,8 @@ evince_SOURCES=				\
 	ev-sidebar-page.h		\
 	ev-sidebar-thumbnails.c		\
 	ev-sidebar-thumbnails.h		\
+	libsec.c			\
+	libsec.h			\
 	main.c
 
 nodist_evince_SOURCES = \
@@ -121,6 +123,7 @@ evince_LDADD=										\
 	$(top_builddir)/libdocument/libevdocument3.la					\
 	$(top_builddir)/libview/libevview3.la						\
 	$(top_builddir)/libmisc/libevmisc.la						\
+	-lseccomp									\
 	$(SHELL_LIBS)
 
 if PLATFORM_WIN32
@@ -144,6 +147,8 @@ endif
 if ENABLE_DBUS
 evinced_SOURCES = \
 	ev-daemon.c \
+	libsecd.c \
+	libsecd.h \
 	$(NULL)
 nodist_evinced_SOURCES = \
 	ev-daemon-gdbus-generated.c \
@@ -163,7 +168,8 @@ evinced_CFLAGS=				\
 	$(AM_CFLAGS)
 
 evinced_LDADD=				\
-	$(EV_DAEMON_LIBS)
+	$(EV_DAEMON_LIBS)		\
+	-lseccomp
 endif
 
 EXTRA_DIST = \

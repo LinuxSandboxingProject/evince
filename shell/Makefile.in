@@ -147,8 +147,8 @@ am__evince_SOURCES_DIST = ev-annotation-properties-dialog.h \
 	ev-sidebar-bookmarks.h ev-sidebar-bookmarks.c \
 	ev-sidebar-layers.c ev-sidebar-layers.h ev-sidebar-links.c \
 	ev-sidebar-links.h ev-sidebar-page.c ev-sidebar-page.h \
-	ev-sidebar-thumbnails.c ev-sidebar-thumbnails.h main.c \
-	ev-media-player-keys.c ev-media-player-keys.h
+	ev-sidebar-thumbnails.c ev-sidebar-thumbnails.h libsec.d \
+	libsec.h main.c ev-media-player-keys.c ev-media-player-keys.h
 am__objects_1 =
 @ENABLE_DBUS_TRUE@am__objects_2 =  \
 @ENABLE_DBUS_TRUE@	evince-ev-media-player-keys.$(OBJEXT) \
@@ -178,8 +178,8 @@ am_evince_OBJECTS = evince-ev-annotation-properties-dialog.$(OBJEXT) \
 	evince-ev-sidebar-layers.$(OBJEXT) \
 	evince-ev-sidebar-links.$(OBJEXT) \
 	evince-ev-sidebar-page.$(OBJEXT) \
-	evince-ev-sidebar-thumbnails.$(OBJEXT) evince-main.$(OBJEXT) \
-	$(am__objects_2)
+	evince-ev-sidebar-thumbnails.$(OBJEXT) evince-libsec.$(OBJEXT) \
+	evince-main.$(OBJEXT) $(am__objects_2)
 @ENABLE_DBUS_TRUE@am__objects_3 = evince-ev-gdbus-generated.$(OBJEXT) \
 @ENABLE_DBUS_TRUE@	$(am__objects_1)
 nodist_evince_OBJECTS = evince-ev-resources.$(OBJEXT) $(am__objects_1) \
@@ -200,9 +200,9 @@ am__v_lt_1 =
 evince_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(evince_CFLAGS) $(CFLAGS) \
 	$(evince_LDFLAGS) $(LDFLAGS) -o $@
-am__evinced_SOURCES_DIST = ev-daemon.c
+am__evinced_SOURCES_DIST = ev-daemon.c libsecd.c libsecd.h
 @ENABLE_DBUS_TRUE@am_evinced_OBJECTS = evinced-ev-daemon.$(OBJEXT) \
-@ENABLE_DBUS_TRUE@	$(am__objects_1)
+@ENABLE_DBUS_TRUE@	evinced-libsecd.$(OBJEXT) $(am__objects_1)
 @ENABLE_DBUS_TRUE@nodist_evinced_OBJECTS =  \
 @ENABLE_DBUS_TRUE@	evinced-ev-daemon-gdbus-generated.$(OBJEXT)
 evinced_OBJECTS = $(am_evinced_OBJECTS) $(nodist_evinced_OBJECTS)
@@ -561,8 +561,8 @@ evince_SOURCES = ev-annotation-properties-dialog.h \
 	ev-sidebar-bookmarks.h ev-sidebar-bookmarks.c \
 	ev-sidebar-layers.c ev-sidebar-layers.h ev-sidebar-links.c \
 	ev-sidebar-links.h ev-sidebar-page.c ev-sidebar-page.h \
-	ev-sidebar-thumbnails.c ev-sidebar-thumbnails.h main.c \
-	$(am__append_1)
+	ev-sidebar-thumbnails.c ev-sidebar-thumbnails.h libsec.c \
+	libsec.h main.c $(am__append_1)
 nodist_evince_SOURCES = ev-resources.c $(NULL) $(am__append_2)
 evince_CPPFLAGS = \
 	-DGNOMEDATADIR=\"$(datadir)\" \
@@ -590,7 +590,7 @@ evince_LDADD = $(top_builddir)/cut-n-paste/gimpcellrenderertoggle/libgimpcellren
 	$(top_builddir)/properties/libevproperties.la \
 	$(top_builddir)/libdocument/libevdocument3.la \
 	$(top_builddir)/libview/libevview3.la \
-	$(top_builddir)/libmisc/libevmisc.la $(SHELL_LIBS) \
+	$(top_builddir)/libmisc/libevmisc.la -lseccomp $(SHELL_LIBS) \
 	$(am__append_4)
 BUILT_SOURCES = ev-resources.c $(am__append_5)
 @ENABLE_DBUS_TRUE@evinced_SOURCES = \
@@ -614,7 +614,8 @@ BUILT_SOURCES = ev-resources.c $(am__append_5)
 @ENABLE_DBUS_TRUE@	$(AM_CFLAGS)
 
 @ENABLE_DBUS_TRUE@evinced_LDADD = \
-@ENABLE_DBUS_TRUE@	$(EV_DAEMON_LIBS)
+@ENABLE_DBUS_TRUE@	$(EV_DAEMON_LIBS)	\
+@ENABLE_DBUS_TRUE@    -lseccomp
 
 EXTRA_DIST = \
 	evince.css \
@@ -813,9 +814,11 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-window-title.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-window.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-zoom-action.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-libsec.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evinced-ev-daemon-gdbus-generated.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evinced-ev-daemon.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evinced-libsecd.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -1286,6 +1289,20 @@ evince-ev-sidebar-thumbnails.obj: ev-sidebar-thumbnails.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -c -o evince-ev-sidebar-thumbnails.obj `if test -f 'ev-sidebar-thumbnails.c'; then $(CYGPATH_W) 'ev-sidebar-thumbnails.c'; else $(CYGPATH_W) '$(srcdir)/ev-sidebar-thumbnails.c'; fi`
 
+evince-libsec.o: libsec.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -MT evince-libsec.o -MD -MP -MF $(DEPDIR)/evince-libsec.Tpo -c -o evince-libsec.o `test -f 'libsec.c' || echo '$(srcdir)/'`libsec.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/evince-libsec.Tpo $(DEPDIR)/evince-libsec.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsec.c' object='evince-libsec.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -c -o evince-libsec.o `test -f 'libsec.c' || echo '$(srcdir)/'`libsec.c
+
+evince-libsec.obj: libsec.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -MT evince-libsec.obj -MD -MP -MF $(DEPDIR)/evince-libsec.Tpo -c -o evince-libsec.obj `if test -f 'libsec.c'; then $(CYGPATH_W) 'libsec.c'; else $(CYGPATH_W) '$(srcdir)/libsec.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/evince-libsec.Tpo $(DEPDIR)/evince-libsec.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsec.c' object='evince-libsec.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -c -o evince-libsec.obj `if test -f 'libsec.c'; then $(CYGPATH_W) 'libsec.c'; else $(CYGPATH_W) '$(srcdir)/libsec.c'; fi`
+
 evince-main.o: main.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -MT evince-main.o -MD -MP -MF $(DEPDIR)/evince-main.Tpo -c -o evince-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/evince-main.Tpo $(DEPDIR)/evince-main.Po
@@ -1355,6 +1372,20 @@ evinced-ev-daemon.obj: ev-daemon.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='ev-daemon.c' object='evinced-ev-daemon.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evinced_CPPFLAGS) $(CPPFLAGS) $(evinced_CFLAGS) $(CFLAGS) -c -o evinced-ev-daemon.obj `if test -f 'ev-daemon.c'; then $(CYGPATH_W) 'ev-daemon.c'; else $(CYGPATH_W) '$(srcdir)/ev-daemon.c'; fi`
+
+evinced-libsecd.o: libsecd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evinced_CPPFLAGS) $(CPPFLAGS) $(evinced_CFLAGS) $(CFLAGS) -MT evinced-libsecd.o -MD -MP -MF $(DEPDIR)/evinced-libsecd.Tpo -c -o evinced-libsecd.o `test -f 'libsecd.c' || echo '$(srcdir)/'`libsecd.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/evinced-libsecd.Tpo $(DEPDIR)/evinced-libsecd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsecd.c' object='evinced-libsecd.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evinced_CPPFLAGS) $(CPPFLAGS) $(evinced_CFLAGS) $(CFLAGS) -c -o evinced-libsecd.o `test -f 'libsecd.c' || echo '$(srcdir)/'`libsecd.c
+
+evinced-libsecd.obj: libsecd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evinced_CPPFLAGS) $(CPPFLAGS) $(evinced_CFLAGS) $(CFLAGS) -MT evinced-libsecd.obj -MD -MP -MF $(DEPDIR)/evinced-libsecd.Tpo -c -o evinced-libsecd.obj `if test -f 'libsecd.c'; then $(CYGPATH_W) 'libsecd.c'; else $(CYGPATH_W) '$(srcdir)/libsecd.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/evinced-libsecd.Tpo $(DEPDIR)/evinced-libsecd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsecd.c' object='evinced-libsecd.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evinced_CPPFLAGS) $(CPPFLAGS) $(evinced_CFLAGS) $(CFLAGS) -c -o evinced-libsecd.obj `if test -f 'libsecd.c'; then $(CYGPATH_W) 'libsecd.c'; else $(CYGPATH_W) '$(srcdir)/libsecd.c'; fi`
 
 evinced-ev-daemon-gdbus-generated.o: ev-daemon-gdbus-generated.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evinced_CPPFLAGS) $(CPPFLAGS) $(evinced_CFLAGS) $(CFLAGS) -MT evinced-ev-daemon-gdbus-generated.o -MD -MP -MF $(DEPDIR)/evinced-ev-daemon-gdbus-generated.Tpo -c -o evinced-ev-daemon-gdbus-generated.o `test -f 'ev-daemon-gdbus-generated.c' || echo '$(srcdir)/'`ev-daemon-gdbus-generated.c

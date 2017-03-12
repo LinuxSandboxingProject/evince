@@ -33,6 +33,14 @@
 
 #include "ev-daemon-gdbus-generated.h"
 
+//todo: set this flag in makefile
+#define HAVE_LIBSECCOMP
+
+#ifdef HAVE_LIBSECCOMP
+#include "libsecd.h"
+#include <stdlib.h>
+#endif /* HAVE_LIBSECCOMP */
+
 #define EV_DBUS_DAEMON_NAME             "org.gnome.evince.Daemon"
 #define EV_DBUS_DAEMON_INTERFACE_NAME   "org.gnome.evince.Daemon"
 #define EV_DBUS_DAEMON_OBJECT_PATH      "/org/gnome/evince/Daemon"
@@ -455,6 +463,16 @@ ev_daemon_application_class_init (EvDaemonApplicationClass *klass)
 gint
 main (gint argc, gchar **argv)
 {
+
+        #ifdef HAVE_LIBSECCOMP
+
+        if(applyFilter()){
+            perror("SECCOMP initialisation failed");
+            exit(EXIT_FAILURE);
+        }
+
+        #endif /* HAVE_LIBSECCOMP */
+
         GApplication *application;
         const GApplicationFlags flags = G_APPLICATION_IS_SERVICE;
         GError *error = NULL;
