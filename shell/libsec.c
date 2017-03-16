@@ -163,7 +163,6 @@ int protectedView(void){
     ALLOW_RULE (close);
     ALLOW_RULE (connect);
     ALLOW_RULE (eventfd2);
-    ALLOW_RULE (execve);
     ALLOW_RULE (exit);
     ALLOW_RULE (exit_group);
     ALLOW_RULE (fadvise64);
@@ -244,72 +243,30 @@ int protectedView(void){
 
     // prevent network access and open files for writing
 
-	/* special restrictions for socket, only allow AF_UNIX/AF_LOCAL */
-	if (seccomp_rule_add (ctx, SCMP_ACT_ALLOW, SCMP_SYS(socket), 1,
-	                      SCMP_CMP(0, SCMP_CMP_EQ, AF_UNIX)) < 0)
-		goto out;
+    /* special restrictions for socket, only allow AF_UNIX/AF_LOCAL */
+    if (seccomp_rule_add (ctx, SCMP_ACT_ALLOW, SCMP_SYS(socket), 1,
+			  SCMP_CMP(0, SCMP_CMP_EQ, AF_UNIX)) < 0)
+	goto out;
 
-	if (seccomp_rule_add (ctx, SCMP_ACT_ALLOW, SCMP_SYS(socket), 1,
-	                      SCMP_CMP(0, SCMP_CMP_EQ, AF_LOCAL)) < 0)
-		goto out;
-
-
-	/* special restrictions for open, allow only reading files */
-	if (seccomp_rule_add (ctx, SCMP_ACT_ALLOW, SCMP_SYS(open), 1,
-	                      SCMP_CMP(1, SCMP_CMP_MASKED_EQ, O_WRONLY | O_RDWR, 0)) < 0)
-		goto out;
-
-	if (seccomp_rule_add (ctx, SCMP_ACT_ERRNO (EACCES), SCMP_SYS(open), 1,
-	                      SCMP_CMP(1, SCMP_CMP_MASKED_EQ, O_WRONLY, O_WRONLY)) < 0)
-		goto out;
-
-	if (seccomp_rule_add (ctx, SCMP_ACT_ERRNO (EACCES), SCMP_SYS(open), 1,
-	                      SCMP_CMP(1, SCMP_CMP_MASKED_EQ, O_RDWR, O_RDWR)) < 0)
-		goto out;
-
-    /* this filter is susceptible to TOCTOU race conditions, providing limited use */
-    /* allow opening only specified files identified by their file descriptors*/
-
-    // this requires either a list of all files to open (A LOT!!!)
-    // or needs to be applied only after initialisation, right before parsing
-    // if(seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(read), 1,
-    //                         SCMP_CMP(SCMP_CMP_EQ, fd)) < 0) // or < 1 ???
-    //     goto out;
+    if (seccomp_rule_add (ctx, SCMP_ACT_ALLOW, SCMP_SYS(socket), 1,
+			  SCMP_CMP(0, SCMP_CMP_EQ, AF_LOCAL)) < 0)
+	goto out;
 
 
-    /* restricting write access */
+    /* special restrictions for open, allow only reading files */
+    if (seccomp_rule_add (ctx, SCMP_ACT_ALLOW, SCMP_SYS(open), 1,
+			  SCMP_CMP(1, SCMP_CMP_MASKED_EQ, O_WRONLY | O_RDWR, 0)) < 0)
+	goto out;
 
-    /* allow stdin */
-    // if (seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(write), 1,
-    //                         SCMP_CMP(0, SCMP_CMP_EQ, 0)) < 0 )
-    //     goto out;
+    if (seccomp_rule_add (ctx, SCMP_ACT_ERRNO (EACCES), SCMP_SYS(open), 1,
+			  SCMP_CMP(1, SCMP_CMP_MASKED_EQ, O_WRONLY, O_WRONLY)) < 0)
+	goto out;
 
-    /* allow stdout */
-    // if (seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(write), 1,
-    //                             SCMP_CMP(0, SCMP_CMP_EQ, 1)) < 0 )
-    //     goto out;
+    if (seccomp_rule_add (ctx, SCMP_ACT_ERRNO (EACCES), SCMP_SYS(open), 1,
+			  SCMP_CMP(1, SCMP_CMP_MASKED_EQ, O_RDWR, O_RDWR)) < 0)
+	goto out;
 
-    /* allow stderr */
-    // if (seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(write), 1,
-    //                              SCMP_CMP(0, SCMP_CMP_EQ, 2)) < 0 )
-    //     goto out;
-    //
-    //
-    // /* restrict writev (write a vector) access */
-    // // this does not seem reliable but it surprisingly is. investigate the reason
-    // if (seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(writev), 1,
-    //                             SCMP_CMP(0, SCMP_CMP_EQ, 3)) < 0 )
-    //     goto out;
-
-    //test if repeating this after some time or denying it works
-
-
-    // firest attempt to filter poll requests
-    // if (seccomp_rule_add (ctx, SCMP_ACT_ALLOW, SCMP_SYS(poll), 1,
-    // 	                      SCMP_CMP(0, SCMP_CMP_MASKED_EQ, POLLIN | POLL, 0)) < 0)
-    // 	goto out;
-
-
+	
     /* restrict fcntl calls */
     // this syscall sets the file descriptor to read write
     // if (seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(fcntl), 1,

@@ -343,6 +343,9 @@ main (int argc, char *argv[])
                 goto done;
         }
 
+
+	// tighten syscall filter at this point, only few syscalls should be needed
+
 	load_files (file_arguments);
 
 	/* Change directory so we don't prevent unmounting in case the initial cwd
