@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" style="task" id="annotations-save" xml:lang="pt-BR">
 <info>
   <link type="guide" xref="index#annotations"/>
- <desc>How to save your annotations.</desc>
+ <desc>Como salvar suas anotações.</desc>
 
     <revision pkgversion="3.2" date="2011-09-05" status="final"/>
     <revision pkgversion="3.14" date="2015-01-07" status="review"/>
@@ -15,31 +15,43 @@
       <email its:translate="no">tyagishobha@gmail.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
-</info>
-<title>Save a copy of an annotated PDF</title>
- <p>
-  To save a copy of your annotated PDF for future viewing using the
-  <app>document viewer</app> or any other PDF viewer
-  <em>that supports annotations</em>:
- </p>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+<title>Salvando uma cópia de um arquivo PDF com anotações</title>
+ <p>Para salvar uma cópia anotada de seu PDF para futura visualização utilizando o <app>Visualizador de documentos</app> ou qualquer outro visualizador de arquivos PDF <em>que suporte anotações</em>:</p>
   <steps>
    <item>
-     <p>
-      Click <guiseq><gui>File options</gui><gui>Save a Copy…</gui></guiseq>
-     </p>
+     <p>Use o item <gui>Salvar uma cópia…</gui> no menu de Opções do arquivo, ou tecle <keyseq><key>Ctrl</key><key>S</key></keyseq>.</p>
    </item>
    <item>
-     <p>
-      Choose a name and folder in which to save the file, then click
-      <gui>Save</gui>. The PDF will be saved in the folder you chose.
-     </p>
+     <p>Escolha um nome e uma pasta na qual deseja salvar o arquivo, clique em <gui>Salvar</gui>. O arquivo PDF anotado será salvo na pasta que você escolheu.</p>
     </item>
    </steps>
-   <p>
-   Annotations are added according to the PDF specification. Therefore, most PDF
-   readers should be able to read them. Adobe Reader is known to work.
-   </p>
+   <p>As anotações são incluídas no arquivo de acordo com a especificação PDF. Portanto, a maioria dos leitores de PDF devem ser capazes de lê-las. O "Adobe Reader" reconhecidamente suporta estas anotações.</p>
 
 </page>

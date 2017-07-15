@@ -17,111 +17,110 @@
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc>Navigating, scrolling and zooming.</desc>
+    <desc>Navegando, usando a rolagem e alterando o zoom.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-  <title>Moving around a document</title>
+  <title>Navegando por um documento</title>
 
   <!-- TODO: split into smaller pages for 3.14 -->
-  <p>You can move around each page of a document by any of the following
-  methods:</p>
+  <p>Você pode navegar por cada página de um documento por um dos seguintes métodos:</p>
 
   <list>
     <item>
-      <p>Scrolling up and down using the mouse wheel. To move around a page
-      just by moving the mouse:</p>
+      <p>Rolar para cima e para baixo usando a roda do mouse. Para rola a página apenas movendo o mouse:</p>
       <steps>
         <item>
-          <p>Right-click the page and select <gui>Autoscroll</gui>.</p>
+          <p>Clique com o botão direito do mouse na página e selecione <gui>Rolagem automática</gui>.</p>
         </item>
         <item>
-          <p>Move the mouse pointer towards the bottom of the window to scroll
-          down; it will scroll faster depending on how far down the window you
-          go.</p>
+          <p>Mova o ponteiro do mouse para a parte inferior da janela para rolar para baixo; a rolagem fica mais rápida dependendo de quanto distante para baixo que você vá.</p>
         </item>
         <item>
-          <p>To stop autoscrolling, click anywhere in the document.</p>
+          <p>Para parar a rolagem automática, clique em qualquer lugar do documento.</p>
         </item>
       </steps>
     </item>
     <item>
-      <p>Using the scroll bar on the document window.</p>
+      <p>Usando a barra de rolagem na janela.</p>
     </item>
     <item>
-      <p>Using the up and down arrow keys of your keyboard.</p>
+      <p>Usando as setas para cima e para baixo no teclado.</p>
     </item>
     <item>
-      <p>Dragging the page around with your mouse, as if you are grabbing it.
-      To do this:</p>
+      <p>Arrastando a página com o ponteiro de seu mouse, como se estivesse agarrando-a. Para fazer isso:</p>
       <list>
         <item>
-          <p>Move the mouse pointer over the page and hold down the middle
-          mouse button to drag it around.</p>
+          <p>Mova o ponteiro do mouse sobre a página e mantenha pressionado o botão do meio para arrastá-la.</p>
         </item>
         <item>
-          <p>If you don't have a middle mouse button, hold down the left and
-          right mouse buttons at the same time, then drag.</p>
+          <p>Se você não tiver um botão do meio do mouse, segure os botões esquerdo e direito ao mesmo tempo e arraste.</p>
         </item>
       </list>
     </item>
   </list>
 
 <section id="between-pages">
-  <title>Flipping between pages</title>
+  <title>Navegando entre páginas</title>
 
-  <p>You can move between pages of a document using one of the following
-  methods:</p>
+  <p>Você pode navegar pelas páginas de um documento por um dos seguintes métodos:</p>
 
   <list>
     <item>
-      <p>Click the <gui>&lt;</gui> or <gui>&gt;</gui> buttons on the
-      <link xref="toolbar">toolbar</link>.</p>
+      <p>Clique nos botões <gui>&lt;</gui> ou <gui>&gt;</gui> na <link xref="toolbar">barra de ferramentas</link>.</p>
     </item>
     <item>
-      <p>Press the <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> or
-      <keyseq><key>Ctrl</key><key>Page Down</key></keyseq> buttons on the
-      keyboard.</p>
+      <p>Pressione as teclas <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> or <keyseq><key>Ctrl</key><key>Page Down</key></keyseq> no teclado.</p>
     </item>
     <item>
-      <p>To go to a specific page:</p>
+      <p>Para ir até uma determinada página:</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="toolbar">toolbar</link> and press <key>Enter</key>.</p>
+          <p>Digite um número de página na caixa do canto superior esquerdo da <link xref="toolbar">barra de ferramentas</link> e pressione <key>Enter</key>.</p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the toolbar.</p>
+          <p>Para ver as páginas visitadas anteriormente, use os botões <gui style="button">&lt;</gui> ou <gui style="button">&gt;</gui> da barra de ferramentas.</p>
         </item>
         <item>
-          <p>If you want to go to the beginning or the end of the document:</p>
+          <p>Para ir para o início ou para o final do documento:</p>
           <list>
             <item>
-              <p>Click the <gui>File options</gui> menu in the top right corner
-              and select <gui>First Page</gui>. You can also press
-              <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
-              keyboard.</p>
+              <p>Clique no menu de <gui>Opções de visualização</gui> no canto superior direito da janela e selecione <gui>Primeira página</gui>. Você também pode pressionar as teclas <keyseq><key>Ctrl</key><key>Home</key></keyseq> do teclado.</p>
             </item>
             <item>
-              <p>Click the <gui>File options</gui> menu in the top right corner
-              and select <gui>Last Page</gui> or press
-              <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
-              keyboard.</p>
+              <p>Clique no menu de <gui>Opções de visualização</gui> no canto superior direito da janela e selecione <gui>Última página</gui>. Você também pode pressionar as teclas <keyseq><key>Ctrl</key><key>End</key></keyseq> do teclado.</p>
             </item>
           </list>
         </item>
       </list>
     </item>
     <item>
-      <p>To move ten pages at a time, press <keyseq><key>Shift</key><key>Page
-      Up</key></keyseq> or <keyseq><key>Shift</key><key>Page
-      Down</key></keyseq>.</p>
+      <p>Para pular dez páginas por vez, pressione as teclas <keyseq><key>Shift</key><key>Page Up</key></keyseq> ou <keyseq><key>Shift</key><key>Page Down</key></keyseq>.</p>
       <note style="tip">
-        <p>You can only move around one page at a time, by default. If you want
-        to move between pages just by scrolling or dragging, click the
-        <gui>View options</gui> button in the top-right corner and select
-        <gui>Continuous</gui>.</p>
+        <p>Para se mover entre as páginas pela rolagem ou arrastando, certifique-se de que o item <gui>Contínuo</gui> do menu de <gui>Opções de visualização</gui> esteja marcado. Caso contrário, a rolagem apenas afeta a página atual.</p>
       </note>
     </item>
   </list>
@@ -129,85 +128,66 @@
 </section>
 
 <section id="navigating">
-  <title>Navigating with a page list or table of contents</title>
+  <title>Navegando com uma lista de páginas, marcadores ou um índice.</title>
 
-  <p>To make the side pane visible, click the <gui>View options</gui> button in
-  the top-right corner and select <gui>Side Pane</gui>, or press <key>F9</key> on
-  the keyboard. You should see a preview of all of the pages in the
-  document.</p>
+  <p>Para fazer com que o painel lateral apareça, marque a opção <gui>Barra lateral</gui> no menu de <gui>Opções de visualização</gui> no canto superior direito ou pressione a tecla <key>F9</key> no teclado. Você deverá ver miniaturas de pré-visualização de todas as páginas do documento.</p>
 
-  <p>You can move between pages by clicking on them in the side pane.</p>
+  <p>Você pode mover entre as páginas clicando sobre elas no painel lateral.</p>
 
   <note>
-    <p>Some documents have an index or table of contents, which you can display
-    in the side pane. Click the drop-down list at the top of the side pane and
-    select <gui>Index</gui> to view it.</p>
+    <p>Alguns documentos têm índice, que você pode exibir no painel lateral. Clique na lista no topo do painel lateral e selecione <gui>Índice</gui> para exibi-lo.</p>
     <note style="tip">
-      <p>Most documents don't use this feature, so you won't be able to view
-      their index in the side pane.</p>
+      <p>A maioria dos documentos não usa este recurso, fazendo com que a entrada <gui>Índice</gui> fique desabilitada no painel lateral.</p>
     </note>
   </note>
 
 </section>
 
 <section id="zoom">
-  <title>Zooming in and out</title>
+  <title>Aproximando e afastando o zoom</title>
 
   <list>
     <item>
-      <p>Click the <gui>View options</gui> button in the top-right corner and
-      select <gui>Zoom In</gui> or use the keyboard shortcuts
-      <keyseq><key>Ctrl</key><key>+</key></keyseq> to zoom in.</p>
+      <p>Clique no menu de <gui>Opções do visualização</gui> no canto superior direito da janela e selecione o item <gui>Ampliar</gui> ou use o atalho de teclado <keyseq><key>Ctrl</key><key>+</key></keyseq>.</p>
     </item>
     <item>
-      <p>Click the <gui>View options</gui> button in the top-right corner and
-      select <gui>Zoom Out</gui> or use the keyboard shortcuts
-      <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+      <p>Clique no menu de <gui>Opções do visualização</gui> no canto superior direito da janela e selecione o item <gui>Reduzir</gui> ou use o atalho de teclado <keyseq><key>Ctrl</key><key>-</key></keyseq>.</p>
     </item>
   </list>
 
-  <p>Alternatively, you can do one of the following:</p>
+  <p>Alternativamente, você pode:</p>
 
   <list>
     <item>
-      <p>hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
+      <p>manter a tecla <key>Ctrl</key> pressionada e usar a roda do mouse para ajustar o zoom.</p>
     </item>
     <item>
-      <p>select desired zoom percentage from the drop down menu above the
-      window.</p>
+      <p>selecionar o zoom desejado na lista no topo da janela.</p>
       <media type="image" src="figures/zoom.png"/>
     </item>
   </list>
 
   <note>
-    <p>The <gui>Fit Page</gui> option will make a document page fit the whole
-    <em>height</em> of the window.</p>
-    <p>The <gui>Fit Width</gui> option will make a document page fill the whole
-    <em>width</em> of the window.</p>
-    <p>If you want to see two pages at once, side by side, like in a book,
-    click the <gui>View options</gui> button in the top-right corner and select
-    <gui>Dual</gui>.</p>
-    <p>If the allow-links-change-zoom gsetting is set to false, links are blocked
-    from changing your zoom level.</p>
+    <p>A opção <gui>Ajustar página</gui> fará com que o zoom seja ajustado para que a página do documento seja exibida inteiramente.</p>
+    <p>A opção <gui>Ajustar largura</gui> fará com que o zoom seja ajustado para que a <em>largura</em> página do documento coincida com a largura de exibição disponível da janela.</p>
+    <p>Se você quiser ver duas páginas ao mesmo tempo, lado a lado, como em um livro, marque o item <gui>Duplo</gui> no menu de <gui>Opções de visualização</gui> no canto superior direito da janela.</p>
+    <p>Se a opção do gsettings allow-links-change-zoom é definida como falsa, links são impedidos de mudar o nível de zoom.</p>
   </note>
 
-  <p>You can use the whole of your screen to view the document:</p>
+  <p>Você pode usar toda a tela para exibir o documento:</p>
 
   <list>
     <item>
-      <p>Click the <gui>View options</gui> button in the top-right corner and
-      select <gui>Fullscreen</gui> or press <key>F11</key>.</p>
+      <p>Marque a opção <gui>Tela cheia</gui> no menu de <gui>Opções de visualização</gui> no canto superior direito da janela ou use a tecla <key>F11</key> do teclado.</p>
     </item>
     <item>
-      <p>To exit the full screen mode:</p>
+      <p>Para sair do modo de tela cheia:</p>
       <list>
         <item>
-          <p>Press <key>F11</key> or <key>Escape</key></p>
+          <p>Use as teclas <key>F11</key> ou <key>Esc</key></p>
         </item>
         <item>
-          <p>Or disable <gui>Fullscreen</gui> by clicking the <gui>View
-          options</gui> button in the top-right corner and select
-          <gui>Fullscreen</gui>.</p>
+          <p>Desmarque a opção <gui>Tela cheia</gui> no menu de <gui>Opções de visualização</gui> no canto superior direito da tela.</p>
         </item>
       </list>
     </item>

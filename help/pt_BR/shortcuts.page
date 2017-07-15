@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#advanced"/>
-    <desc>See a list of all shortcuts, and learn how to create your own custom shortcuts.</desc>
+    <desc>Veja uma lista de todos os atalhos, e aprenda a criar seus próprios atalhos.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -28,143 +28,156 @@
     </credit>
 
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
 
-<title>Keyboard shortcuts</title>
+<title>Atalhos de teclado</title>
 
-<section id="default-shortcuts"><title>Default shortcuts</title>
+<section id="default-shortcuts"><title>Atalhos padrão</title>
 <section id="open-close-save-print">
-  <title>Opening, closing, saving and printing</title>
+  <title>Abrindo, fechando, salvando e imprimindo</title>
   <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Open a document.</p></td>
+        <td><p>Abrir um documento.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>O</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Open a copy of the current document.</p></td>
+        <td><p>Abrir uma cópia do documento atual.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>N</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Save a copy of the current document with a new file
-name.</p></td>
+        <td><p>Salvar uma cópia do documento atual com um novo nome de arquivo.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>S</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Print the current document.</p></td>
+        <td><p>Imprimir o documento atual.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>P</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Close the current document window.</p></td>
+        <td><p>Fechar a janela do documento atual.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>W</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Reload the document (effectively closes and re-opens the
-document).</p></td>
+        <td><p>Atualiza o documento (efetivamente fecha e reabre o documento).</p></td>
         <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
     </tr>
   </table>
 </section>
 
 <section id="move-around">
-    <title>Moving around the document</title>
+    <title>Navegando pelo documento</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Move up/down a page.</p></td>
-        <td><p>Arrow keys</p></td>
+        <td><p>Move a página acima/abaixo.</p></td>
+        <td><p>Setas do teclado</p></td>
     </tr>
     <tr>
-        <td><p>Move up/down a page several lines at a time.</p></td>
+        <td><p>Move várias linhas da página acima/abaixo.</p></td>
         <td><p><key>Page Up</key> / <key>Page Down</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the previous/next page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> /
-<keyseq><key>Ctrl</key><key>Page Down</key></keyseq></p></td>
+        <td><p>Vai para a página anterior/próxima página.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> / <keyseq><key>Ctrl</key><key>Page Down</key></keyseq></p></td>
     </tr>
 <tr>
-        <td><p>Go to page number.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> followed by the page number and <key>Enter</key></p></td>
+        <td><p>Vai para um número de página.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> seguido do número da página e <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Go to the beginning of a page (beginning of the document
-if <guiseq><gui>View</gui> <gui>Continuous</gui></guiseq> is
-selected).</p></td>
+        <td><p>Ir para o início de uma página (ou do documento se a opção <gui>Contínuo</gui> do menu de <gui>Opções de visualização</gui> está marcada).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the end of a page (end of the document if
-<guiseq><gui>View</gui><gui>Continuous</gui></guiseq> is selected).</p></td>
+        <td><p>Ir para o final de uma página (ou do documento se a opção <gui>Contínuo</gui> do menu de <gui>Opções de visualização</gui> está marcada).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>
-    	<td><p>Go to the beginning of the document.</p></td>
+    	<td><p>Vai para o início do documento.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>Home</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Go to the end of the document.</p></td>
+    	<td><p>Vai para o final do documento.</p></td>
          <td><p><keyseq><key>Ctrl</key><key>End</key></keyseq></p></td>
     </tr>
 </table>
 </section>
 
 <section id="copy">
-    <title>Selecting and copying text</title>
+    <title>Selecionando e copiando texto</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Copy highlighted text.</p></td>
+        <td><p>Copiar o texto selecionado.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Select all the text in a document.</p></td>
+        <td><p>Seleciona todo o texto do documento.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>A</key></keyseq></p></td>
     </tr>
 </table>
 </section>
 
 <section id="find">
-    <title>Finding text</title>
+    <title>Localizando texto</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>
-        Show the toolbar that lets you search for words in the document. The
-        search box is automatically highlighted when you press this, and the
-        search will start as soon as you type some text.
-        </p></td>
+        <td><p>Mostra a barra de ferramentas de pesquisa. A caixa de pesquisa é automaticamente selecionada quando você pressiona o atalho, e a busca começa assim que você digitar algum texto.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Go to the next search result.</p></td>
+        <td><p>Vai para a próximo resultado da busca.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>G</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Go to the previous search result.</p></td>
+        <td><p>Vai para o resultado anterior da busca.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>G</key></keyseq></p></td>
     </tr>
 </table>
 </section>
 
 <section id="rotate-zoom">
-    <title>Rotating and zooming</title>
+    <title>Rotacionando as páginas e ajustando o zoom</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Rotate the pages 90 degrees counter-clockwise.</p></td>
+        <td><p>Gira as páginas 90 graus no sentido anti-horário.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>Left arrow</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Rotate the pages 90 degrees clockwise.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Right
-arrow</key></keyseq></p></td>
+        <td><p>Gira as páginas 90 graus no sentido horário.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Right arrow</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Zoom in.</p></td>
+        <td><p>Aumenta o zoom.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Zoom out.</p></td>
+        <td><p>Reduz o zoom.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>-</key></keyseq></p></td>
     </tr>
 </table>
@@ -172,73 +185,47 @@ arrow</key></keyseq></p></td>
 </section>
 
 <section id="custom-shortcuts">
- <title>Create your own custom shortcuts</title>
+ <title>Crie seus próprios atalhos</title>
 
 
-<p>
-Enable the /desktop/gnome/interface/can_change_accels flag in gconf:
-</p>
+<p>Habilite a flag /desktop/gnome/interface/can_change_accels no gconf:</p>
 <steps>
  <item>
-  <p>
-   Press <keyseq><key>Alt</key><key>F2</key></keyseq>. The Run Application dialogue opens.
-  </p>
+  <p>Pressione as teclas <keyseq><key>Alt</key><key>F2</key></keyseq> para abrir a janela de execução de aplicações.</p>
  </item>
  <item>
-  <p>
-    In the textbox, type 'gconf-editor'.
-  </p>
+  <p>Na caixa de texto, digite "gconf-editor".</p>
  </item>
  <item>
-  <p>
-    In the Configuration Editor select <guiseq><gui>desktop</gui><gui>gnome</gui><gui>interface</gui></guiseq>.
-  </p>
+  <p>No editor de configurações, selecione a entrada <guiseq><gui>desktop</gui><gui>gnome</gui><gui>interface</gui></guiseq>.</p>
  </item>
  <item>
-  <p>
-    Check the value box for <gui>can_change_accels</gui> in the right side of the window.
-  </p>
+  <p>Marque o valor da entrada <gui>can_change_accels</gui> do lado direito da janela.</p>
  </item>
  <item>
-  <p>
-   You can add/change the shortcut as follows:
-  </p>
+  <p>Você pode adicionar ou mudar atalhos da seguinte maneira:</p>
     <list style="auto">
      <item>
-      <p>
-        Open the <app>document viewer</app>.
-      </p>
+      <p>Abra o <app>Visualizador de documentos</app>.</p>
      </item>
       <item>
-      <p>
-        Hover the pointer over the menu item you want to change/create the shortcut for.
-      </p>
+      <p>Coloque o cursor sobre o item de menu que você quer mudar ou criar um atalho.</p>
      </item>
      <item>
-      <p>
-        Enter the shortcut you want on the keyboard, e.g. <keyseq><key>Ctrl</key><key>Shift</key><key>T</key></keyseq>.
-      </p>
+      <p>Tecle o atalho que você quer usar no teclado, por exemplo <keyseq><key>Ctrl</key><key>Shift</key><key>T</key></keyseq>.</p>
      </item>
      <item>
-      <p>
-       Close the <app>document viewer</app>.
-      </p>
+      <p>Feche o <app>Visualizador de documentos</app>.</p>
       </item>
      </list>
      </item>
      <item>
-      <p>
-        Repeat steps 1-3.
-      </p>
+      <p>Repita os passos 1-3.</p>
      </item>
       <item>
-      <p>
-            Uncheck the value box for <gui>can_change_accels</gui> in the right side of the window.
-      </p>
+      <p>Desmarque o valor da entrada <gui>can_change_accels</gui> do lado direito da janela.</p>
        <note>
-        <p>
-          The next time the <app>document viewer</app> launches, your custom shortcut key will be preserved.
-        </p>
+        <p>A próxima vez que o <app>Visualizador de documentos</app> for aberto, as teclas de atalho personalizado serão mantidas.</p>
        </note>
 
      </item>
@@ -246,9 +233,7 @@ Enable the /desktop/gnome/interface/can_change_accels flag in gconf:
 
 
 <note style="tip">
- <p>
-  Note that this also works for many other Gnome applications as well.
- </p>
+ <p>Note que isso também funciona para outras aplicações do Gnome.</p>
 </note>
 </section>
 </page>

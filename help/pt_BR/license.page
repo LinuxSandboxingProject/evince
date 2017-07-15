@@ -4,55 +4,56 @@
   <info>
     <link type="seealso" xref="index"/>
     <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
-    <desc>Legal information.</desc>
+    <desc>Informações legais.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-  <title>License</title>
-  <p>
-    <!-- 
-    Translators: try to use the same translation as the one provided by the CreativeCommons website. 
-    If there is no translation for your language, consider providing one to CreativeCommons.
-    -->
-    This work is distributed under a CreativeCommons Attribution-Share Alike
-    3.0 Unported license.
-  </p>
-  <p>
-    You are free:
-  </p>
+  <title>Licença</title>
+  <p>Esta obra é distribuída sob uma licença Creative Commons Atribuição-Compartilhado Igual 3.0 Não Adaptada.</p>
+  <p>Você é livre:</p>
   <terms>
     <item>
-      <title><em>To share</em></title>
-      <p>To copy, distribute and transmit the work.</p>
+      <title><em>Para compartilhar</em></title>
+      <p>Para copiar, distribuir e transmitir esta obra.</p>
     </item>
     <item>
-      <title><em>To remix</em></title>
-      <p>To adapt the work.</p> 
+      <title><em>Para remixar</em></title>
+      <p>Para adaptar esta obra.</p> 
     </item>
   </terms>
-  <p>
-    Under the following conditions:
-  </p>
+  <p>Sob as seguintes condições:</p>
   <terms>
     <item>
-      <title><em>Attribution</em></title>
-      <p>
-        You must attribute the work in the manner specified by the author or 
-        licensor (but not in any way that suggests that they endorse you or 
-        your use of the work).  
-      </p>
+      <title><em>Atribuição</em></title>
+      <p>Você deve atribuir esta obra da forma especificada pelo autor ou licenciante (mas não de forma a sugerir que eles endossam você ou o sua forma de uso).</p>
     </item>
     <item>
-      <title><em>Share Alike</em></title>
-      <p>
-        If you alter, transform, or build upon this work, you may distribute the 
-        resulting work only under the same, similar or a compatible license.  
-      </p>
+      <title><em>Compartilhamento pela mesma licença</em></title>
+      <p>Se você alterar, transformar ou ampliar esta obra, você só pode distribuir a obra resultante sob a mesma licença, licença semelhante ou compatível.</p>
     </item>
   </terms>
-  <p>
-    <!-- Translators: there are no official localized versions of the legal code, only the deed is localized. -->
-    For the full text of the license, see the 
-    <link href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">CreativeCommons website</link>, 
-    or read the full <link href="http://creativecommons.org/licenses/by-sa/3.0/">Commons Deed</link>. 
-  </p>
+  <p>Para o texto completo da licença, consulte o <link href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">site da Creative Commons</link>, ou leia o <link href="http://creativecommons.org/licenses/by-sa/3.0/">"Commons Deed"</link> completo.</p>
 </page>

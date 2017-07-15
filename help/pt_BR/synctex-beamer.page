@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="sixth"/>
-    <desc>Using SyncTeX with the LaTeX Beamer class.</desc>
+    <desc>Usando SyncTeX com a classe LaTeX Beamer.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -11,32 +11,48 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>Beamer with SyncTeX</title>
-<p>
-    Beamer is a LaTeX class for creating slides for presentations.
-</p>
-<p>
-   You can perform forward and backward search in a <em>Beamer-LaTeX</em> presentation in a similar fashion to <link xref="synctex-search">searching</link> through other TeX files compiled with SyncTeX.  However the search brings you to the corresponding frame (slide), not necessarily the associated line of text.  This difference is outlined in detail below.
-</p>
+<title>Beamer com SyncTeX</title>
+<p>Beamer é uma classe LaTeX para criar slides de apresentação.</p>
+<p>Você pode navegar em uma apresentação <em>Beamer-LaTeX</em> de forma semelhante à <link xref="synctex-search">pesquisa</link> em arquivos fonte TeX compilados com SyncTeX. No entanto, a pesquisa leva para o slide correspondente, mas não necessariamente à linha associada do texto. Esta diferença é descrita em detalhes abaixo.</p>
 <section id="forward-search">
-    <title>Forward search: from Beamer-LaTeX source to PDF (<app>gedit</app> to the <app>document viewer</app>)</title>
-    <p>
-      With <link xref="synctex-search#forward-search">forward search</link>, you can click on a specific line of Beamer-LaTeX source code. The <em>top</em> of the corresponding slide in the PDF will be outlined in red.  This will often be the <em>frametitle</em>.
-    </p>
+    <title>Pesquisa para frente: a partir do código fonte Beamer-LaTeX para o arquivo PDF (do <app>gedit</app> para o <app>Visualizador de documentos</app>)</title>
+    <p>Com a <link xref="synctex-search#forward-search">pesquisa para frente</link>, quando você clicar em uma linha do código-fonte Beamer-LaTeX, o slide <em>principal</em> relacionado no arquivo PDF será realçado em vermelho. Ele normalmente é o <em>frametitle</em> definido no código fonte LaTeX.</p>
 </section>
 
 <section id="backward-search">
 
-    <title>Backward search: from PDF to Beamer-LaTeX source (from the <app>document viewer</app> to <app>gedit</app>)</title>
-     <p>
-     With <link xref="synctex-search#backward-search">backward search</link>, you click on some text in a frame, and the corresponding line of LaTex code that ends that particular frame is highlighted.  This will usually be the line:
-     </p>
+    <title>Pesquisa para trás: a partir do o arquivo PDF para o código fonte Beamer-LaTeX (do <app>Visualizador de documentos</app> para o <app>gedit</app>)</title>
+     <p>Com a pesquisa para trás, clicando em algum texto no documento PDF, a linha correspondente do código LaTeX que termina bloco gerador do texto é realçada. Esta linha será geralmente uma:</p>
  <code>\end{frame}</code>
-<p>corresponding to the frame you clicked on.</p>
+<p>correspondente ao bloco clicado.</p>
 
 
 </section>

@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="first"/>
-    <desc>SyncTeX support is available.</desc>
+    <desc>O suporte à SyncTeX está disponível.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.12" date="2014-02-10" status="final"/>
@@ -12,13 +12,35 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>What is SyncTeX?</title>
-<p>
-   SyncTeX is a method that enables synchronization between a TeX source file and the resulting PDF output.
-</p>
+<title>O que é SyncTeX?</title>
+<p>SyncTeX é um método que possibilita a sincronização entre um arquivo fonte TeX e o arquivo PDF resultante.</p>
 
 </page>

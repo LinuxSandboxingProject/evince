@@ -3,8 +3,7 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <desc><link xref="toolbar#view">Show, hide</link> or
-<link xref="toolbar#edit">edit</link> the toolbar.</desc>
+    <desc><link xref="toolbar#view">Mostrar, esconder</link> ou <link xref="toolbar#edit">alterar</link> a barra de ferramentas.</desc>
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <credit type="author">
@@ -12,28 +11,50 @@
       <email its:translate="no">tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>Barra de ferramentas</title>
+<title>A barra de ferramentas</title>
 
-<p>The toolbar contains:</p>
+<p>A barra de ferramentas contém:</p>
   <list>
     <item>
-      <p><gui>∧</gui> and <gui>∨</gui> for 
-      <link xref="movingaround#between-pages">moving</link> 
-      from page to page.</p>
+      <p>Botões <gui>∧</gui> e <gui>∨</gui> para <link xref="movingaround#between-pages">mover</link> entre páginas.</p>
     </item>
     <item>
-      <p>The 'page select' <link xref="movingaround#between-pages">tool.</link></p>
+      <p>A <link xref="movingaround#between-pages">caixa de seleção de página</link>.</p>
     </item>
     <item>
-      <p><gui>&lt;</gui> and <gui>&gt;</gui> for moving between history items.</p>
+      <p>Botões <gui>&lt;</gui> e <gui>&gt;</gui> para navegar entre itens do histórico.</p>
     </item>
     <item>
-      <p>A tool to adjust the <link xref="movingaround#zoom">zoom</link> level.</p>
+      <p>Uma ferramenta para ajustar o nível de <link xref="movingaround#zoom">zoom</link>.</p>
     </item>
   </list>
 </page>

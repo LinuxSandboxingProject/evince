@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="third"/>
-    <desc>How to compile your TeX document with SyncTeX</desc>
+    <desc>Como compilar seu documento TeX com suporte ao SyncTeX</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -11,14 +11,36 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>Compile TeX with SyncTeX</title>
-<p>
-Adding the line <em>\synctex=1</em> in the preamble of your TeX file will trigger synchronization with SyncTeX.
-</p>
+<title>Compile o TeX com SyncTeX</title>
+<p>Adicionar a linha <em>\synctex=1</em> no cabeçalho do seu arquivo TeX irá ativar a sincronização SyncTeX.</p>
 <code>
 \documentclass{article}
 \synctex=1
@@ -27,8 +49,6 @@ Adding the line <em>\synctex=1</em> in the preamble of your TeX file will trigge
 ...
 \end{document}
 </code>
-<p>
-  Alternatively, you can run the pdflatex command with the <em>-synctex=1</em> option:
-</p>
-<screen>pdflatex -synctex=1 yourFile.tex</screen>
+<p>Alternativamente, você pode executar o comando <em>pdflatex</em> com a opção <em>-synctex=1</em>:</p>
+<screen>pdflatex -synctex=1 seuArquivo.tex</screen>
 </page>

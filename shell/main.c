@@ -344,7 +344,7 @@ main (int argc, char *argv[])
         }
 
 
-	// tighten syscall filter at this point, only few syscalls should be needed
+	// enhance syscall filter at this point, only few syscalls should be needed
 
 	load_files (file_arguments);
 

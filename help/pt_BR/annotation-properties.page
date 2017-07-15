@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="annotations"/>
-    <desc>How to customize the author, color, style or icon of an annotation.</desc>
+    <desc>Como personalizar o autor, a cor, o estilo ou o ícone de uma anotação.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -11,43 +11,56 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
- <title>Customize annotations</title>
+ <title>Personalizando anotações</title>
 
 <steps>
  <item>
-  <p>
-   Right click on the annotation icon in the document.
-  </p>
+  <p>Clique com botão direito no ícone da anotação no documento.</p>
  </item>
  <item>
-  <p>
-   Select <gui>Annotation Properties</gui>.
-  </p>
+  <p>Selecione <gui>Propriedades da anotação…</gui>.</p>
  </item>
  <item>
-  <p>
-    In the <gui>Annotation Properties</gui> window, you can change the author, color, style and icon of your note.
-  </p>
+  <p>Na janela <gui>Propriedades de anotação</gui>, você pode alterar autor, cor, estilo e ícone da sua anotação.</p>
    <note>
-    <p>
-     The annotation properties will be applied to the note for which you made the changes only.  Each note can have a different set of properties.
-    </p>
+    <p>As propriedades de anotação serão aplicadas apenas na anotação na qual você fez alterações. Cada anotação pode ter uma definição de propriedades diferente.</p>
    </note>
  </item>
 </steps>
 
 
 <section id="change-default">
- <title>Can I permanently change the default annotation properties?</title>
-<p>
-   The default annotation properties (author, colour, style and icon) can only be changed on a particular note as stated above. So if you want all icons for your notes to be <gui>red</gui> instead of <gui>yellow</gui>, you will have to change the default from <gui>yellow</gui> to <gui>red</gui> individually on each note.  There is no way to save different default settings for annotation properties, at this time.
-
-</p>
+ <title>Eu posso alterar as propriedades padrão das anotações?</title>
+<p>As propriedades das anotações (autor, cor, estilo e ícone) podem apenas ser alterados em cada anotação como mencionado acima. Dessa forma, se você quiser que todos os ícones de suas notas sejam <gui>vermelhas</gui> ao invés de <gui>amarelas</gui>, você terá que alterar o padrão de <gui>amarelo</gui> para <gui>vermelho</gui> em cada anotação. Não há uma forma de salvar as configurações padrão das propriedades de anotações, neste momento.</p>
 
 
 </section>

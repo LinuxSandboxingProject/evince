@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#forms"/>
-    <desc>Working with fillable forms.</desc>
+    <desc>Trabalhando com formulários que podem ser preenchidos.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -11,23 +11,41 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>Forms</title>
-<p>
-   When filling out an interactive form, you can navigate from field to field by clicking on a field with your mouse.  When you are finished filling out a text field, press <key>Enter</key>.
-</p>
+<title>Formulários</title>
+<p>Ao preencher um formulário interativo, você pode navegar entre os campos clicando neles com o mouse. Quando terminar o preenchimento de um campo de texto, pressione a tecla <key>Enter</key>.</p>
 
-<p>
-   You can make a selection in a scrollable list box by clicking on the list box and scrolling to your choice with your mouse.
-</p>
+<p>Você pode selecionar um item de uma lista clicando na caixa da lista e usando o mouse.</p>
 <note style="tip">
- <p>
-There may be some parts of a form that you may need to fill out by hand <em>after</em> you print the form.  For example, you might have to circle certain things, or sign the form in one or more places.  If you wish to do this electronically, you may want to try <link href="http://www.g-loaded.eu/2008/05/03/how-to-annotate-pdf-files-in-linux-using-xournal/">Xournal</link>.
-</p>
+ <p>Podem haver algumas partes de um formulário que pode ser necessário para preencher à mão <em>depois</em> de imprimir o formulário. Por exemplo, você pode ter que circular certas coisas, ou assinar o formulário em um ou mais lugares. Se quiser fazer isso eletronicamente, experimente o aplicativo <link href="http://xournal.sourceforge.net/">Xournal</link>.</p>
 </note>
 
 

@@ -19,40 +19,57 @@
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc>How to open a document.</desc>
+    <desc>Como abrir um documento.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-  <title>Open a document</title>
+  <title>Abrindo um documento</title>
 
-  <p>You can open a document using any one of the following ways:</p>
+  <p>Você pode abrir um documento em qualquer das seguintes formas:</p>
 
   <list>
     <item>
-      <p>Double-click on the file in <app>Files</app> or your <em>file
-      manager</em>.</p>
+      <p>Dê um duplo clique no arquivo no <app>Arquivos</app> ou no seu <em>gerenciador de arquivos</em>.</p>
       <note style="tip">
-        <p>Double clicking PDF, PostScript, .djvu, .dvi and Comic Book
-        Archive files opens them in <app>Document Viewer</app> by default.</p>
+        <p>Um clique duplo em arquivos PDF, PostScript, .djvu, .dvi ou Comic Book Archive abre eles no <app>Visualizador de documentos</app> por padrão.</p>
       </note>
     </item>
     <item>
-      <p>Right-click on a file icon in <app>Files</app> and click
-      <guiseq><gui>Open With</gui><gui>Document Viewer</gui></guiseq>.</p>
+      <p>Clique com o botão direito do mouse sobre um de arquivo no <app>Arquivos</app> e use o item <guiseq><gui>Abrir com</gui><gui>Visualizador de documentos</gui></guiseq>.</p>
     </item>
   </list>
 
-  <p>If a <app>Document Viewer</app> window is already open you can:</p>
+  <p>Se uma janela do <app>Visualizador de documentos</app> já estiver aberta, você pode:</p>
 
   <list>
     <item>
-      <p>Drag a file into the window from <app>Files</app>. The new file will
-      open in a new window.</p>
+      <p>Arrastar um arquivo para ela da janela do <app>Arquivos</app>. O arquivo será aberto em uma nova janela.</p>
     </item>
     <item>
-      <p>Press the <gui>File options</gui> button in the top-right corner of
-      the window, then select <gui>Open…</gui>. In the <gui>Open Document</gui>
-      dialog, choose the file which you wish to open, and click
-      <gui>Open</gui>. The file will open in a new window.</p>
+      <p>Usar o item <gui>Abrir…</gui> do menu de <gui>Opções de arquivo</gui> no canto superior direito da janela. Na caixa de diálogo <gui>Abrir documento</gui>, escolha o arquivo que você deseja abrir e clique em <gui>Abrir</gui>. O arquivo será aberto em uma nova janela.</p>
     </item>
   </list>
 

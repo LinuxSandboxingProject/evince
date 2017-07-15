@@ -2111,9 +2111,12 @@ ev_view_handle_cursor_over_xy (EvView *view, gint x, gint y)
 	if (view->cursor == EV_VIEW_CURSOR_HIDDEN)
 		return;
 
-	if (view->adding_annot_info.adding_annot && !view->adding_annot_info.annot) {
-		if (view->cursor != EV_VIEW_CURSOR_ADD)
+	if (view->adding_annot_info.adding_annot) {
+		if (view->adding_annot_info.type == EV_ANNOTATION_TYPE_TEXT_MARKUP) {
+			ev_view_set_cursor (view, EV_VIEW_CURSOR_IBEAM);
+		} else if (!view->adding_annot_info.annot) {
 			ev_view_set_cursor (view, EV_VIEW_CURSOR_ADD);
+		}
 		return;
 	}
 
@@ -3001,10 +3004,10 @@ ev_view_window_child_put (EvView    *view,
 	view->window_children = g_list_append (view->window_children, child);
 }
 
-static EvViewWindowChild *
-ev_view_find_window_child_for_annot (EvView       *view,
-				     guint         page,
-				     EvAnnotation *annot)
+static void
+ev_view_remove_window_child_for_annot (EvView       *view,
+				       guint         page,
+				       EvAnnotation *annot)
 {
 	GList *children = view->window_children;
 
@@ -3013,17 +3016,18 @@ ev_view_find_window_child_for_annot (EvView       *view,
 		EvAnnotation      *wannot;
 
 		child = (EvViewWindowChild *)children->data;
-		children = children->next;
 
 		if (child->page != page)
 			continue;
 
 		wannot = ev_annotation_window_get_annotation (EV_ANNOTATION_WINDOW (child->window));
-		if (ev_annotation_equal (wannot, annot))
-			return child;
+		if (ev_annotation_equal (wannot, annot)) {
+			gtk_widget_destroy (child->window);
+			view->window_children = g_list_delete_link (view->window_children, children);
+			break;
+		}
+		children = children->next;
 	}
-
-	return NULL;
 }
 
 static void
@@ -3167,7 +3171,6 @@ show_annotation_windows (EvView *view,
 
 	for (l = ev_mapping_list_get_list (annots); l && l->data; l = g_list_next (l)) {
 		EvAnnotation      *annot;
-		EvViewWindowChild *child;
 		GtkWidget         *window;
 
 		annot = ((EvMapping *)(l->data))->data;
@@ -3180,16 +3183,6 @@ show_annotation_windows (EvView *view,
 
 		window = get_window_for_annot (view, annot);
 		if (window) {
-			ev_view_window_child_move_with_parent (view, window);
-			continue;
-		}
-
-		/* Look if we already have a popup for this annot */
-		child = ev_view_find_window_child_for_annot (view, page, annot);
-		window = child ? child->window : NULL;
-		if (window) {
-			ev_annotation_window_set_annotation (EV_ANNOTATION_WINDOW (window), annot);
-			map_annot_to_window (view, annot, window);
 			ev_view_window_child_move_with_parent (view, window);
 		} else {
 			ev_view_create_annotation_window (view, annot, parent);
@@ -3418,7 +3411,6 @@ ev_view_create_annotation (EvView *view)
 	cairo_region_destroy (region);
 
 	view->adding_annot_info.annot = annot;
-	ev_view_set_cursor (view, EV_VIEW_CURSOR_NORMAL);
 }
 
 void
@@ -3475,16 +3467,8 @@ ev_view_remove_annotation (EvView       *view,
 
         page = ev_annotation_get_page_index (annot);
 
-        if (EV_IS_ANNOTATION_MARKUP (annot)) {
-		EvViewWindowChild *child;
-
-		child = ev_view_find_window_child_for_annot (view, page, annot);
-		if (child) {
-			view->window_children = g_list_remove (view->window_children, child);
-			gtk_widget_destroy (child->window);
-			g_free (child);
-		}
-        }
+        if (EV_IS_ANNOTATION_MARKUP (annot))
+		ev_view_remove_window_child_for_annot (view, page, annot);
 	if (view->annot_window_map != NULL)
 		g_hash_table_remove (view->annot_window_map, annot);
 

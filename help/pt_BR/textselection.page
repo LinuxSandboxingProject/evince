@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#faq"/>
-    <desc>When you copy text, the text that is pasted might be different from what you had selected.</desc>
+    <desc>Quando você cola texto, ele pode ser diferente do que você tinha selecionado para copiar.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -11,29 +11,43 @@
       <email>philbull@gmail.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>Why didn't the text I selected copy properly?</title>
+<title>Por que o texto que selecionei não copia corretamente?</title>
 
 
-<p>
-If you highlight and copy text from a document using the <app>document viewer</app> and then paste it into another
-application, the formatting may alter.  It may also contain different characters than the original selection. This often happens when copying text from a PDF document with multiple columns.
-</p>
+<p>Se você destacar e copiar o texto de um documento utilizando o <app>Visualizador de documentos</app> e para, em seguida, colar em outro aplicativo, a formatação do texto pode ser alterada. O texto também pode conter caracteres diferentes da seleção inicial. Isso geralmente acontece ao copiar texto de um documento PDF com várias colunas.</p>
 
 
- <p>
-  This problem happens because of how some document formats handle text.
-  The actual text in the document is stored differently from the way it is
-  displayed. This may result in a copy that does not appear as expected.
- </p>
+ <p>Isso ocorre por causa de como alguns formatos de documentos lidam com texto. O texto real no documento é armazenado de forma diferente da forma como é exibida. Isso pode resultar em uma cópia que não funciona como o esperado.</p>
 
- <p>
-  Unfortunately, there is no real way of fixing this problem. Copying
-  less text at a time, or copying the text into a text editor may minimise the problem. You can locate a text editor by clicking <guiseq><gui>Activities</gui><gui>Applications</gui><gui>Accessories</gui><gui>gedit</gui></guiseq>.
-  </p>
+ <p>Infelizmente, não há nenhuma maneira real de corrigir este problema. Copiar menos texto por vez, ou copiar o texto em um editor de texto simples pode minimizar o problema. Você pode localizar um editor de texto simples, clicando em <gui>Atividades</gui> e procurando o <gui>gedit</gui>.</p>
 
 </page>

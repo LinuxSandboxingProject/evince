@@ -4,7 +4,7 @@
   <info>
     <link type="guide" xref="printing"/>
 
-    <desc>Use the Collate and Reverse options to make pages print in order.</desc>
+    <desc>Use as opções de agrupamento e inversão para que as páginas sejam impressas em ordem.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -12,43 +12,54 @@
       <email>philbull@gmail.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>Getting copies to print in the correct order</title>
+<title>Fazendo com que as cópias sejam impressas na ordem correta</title>
 
 <section id="reverse">
- <title>
-  Reverse
- </title>
- <p>
-  Printers usually print the first page first, and the last page last, so the pages end up in reverse order when you pick them up.
- </p>
- <p>
-  To reverse the order:
- </p>
+ <title>Inventer</title>
+ <p>Impressoras normalmente imprimem a primeira página primeiro e a última página por último, para que as páginas acabem em ordem inversa quando você for pegá-las.</p>
+ <p>Para inverter a ordem:</p>
  <steps>
-  <item><p><guiseq><gui>File</gui><gui>Print</gui></guiseq></p></item>
-  <item><p>In the <gui>General</gui> tab of the Print window under <em>Copies</em>, check <gui>Reverse</gui>. The last page will be printed first, and so on.</p></item>
+  <item><p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui>.</p></item>
+  <item><p>Na aba <gui>Geral</gui> da janela <gui>Imprimir</gui>, em <em>Cópias</em>, selecione <gui>Inverter</gui>. A última página será impressa primeiro, e assim por diante.</p></item>
  </steps>
 </section>
 
 <section id="collate">
- <title>
-  Collate
- </title>
- <p>
-  If you are printing more than one copy of the document, the print outs will be grouped by page number by default. (e.g. The copies of page one come out, then the copies of page two, etc.) Collating will make each copy come out with
-its pages grouped together.
- </p>
+ <title>Intercalar ou agrupar</title>
+ <p>Se você estiver imprimindo mais de uma cópia do mesmo documento, as impressões serão agrupadas por número de página por padrão. (por exemplo, a cópias da primeira página são impressas, em seguida serão impressas as cópias da página dois, etc). Selecionando <gui>Intercalar</gui> vai fazer com que cada cópia seja completamente impressa por vez.</p>
 
- <p>
-  To collate:
- </p>
+ <p>Para agrupar:</p>
  <steps>
-  <item><p>Click <guiseq><gui>File</gui><gui>Print</gui></guiseq></p></item>
-  <item><p>In the <gui>General</gui> tab of the Print window under <em>Copies</em> check <gui>Collate</gui>. </p></item>
+  <item><p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui>.</p></item>
+  <item><p>Na aba <gui>Geral</gui> da janela <gui>Imprimir</gui>, sob <em>Cópias</em>, selecione <gui>Intercalar</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>
 </section>

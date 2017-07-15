@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#faq"/>
-    <desc>Error When Opening A File.</desc>
+    <desc>Erros para abrir arquivos.</desc>
    <link type="seealso" xref="formats"/>
 
 
@@ -13,14 +13,37 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>Why can't I open a file?</title>
+<title>Por que não consigo abrir um arquivo?</title>
 
-<p>If you try to open a document of a format that the <app>document viewer</app> does not recognize, you will get an "Unable to open document" error message. Click <gui>Close</gui> to return to the <app>Document Viewer</app> window.
-</p>
+<p>Se você tentar abrir um documento de um formato que o <app>Visualizador de documentos</app> não reconhece, você receberá uma mensagem de erro "Não foi possível abrir o documento". Clique em <gui>Fechar</gui> para retornar à janela do <app>Visualizador de documentos</app>.</p>
 
 </page>

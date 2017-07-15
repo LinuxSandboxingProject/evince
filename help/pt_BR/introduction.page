@@ -13,12 +13,35 @@
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc>Introduction to the <em>Evince Document Viewer</em>.</desc>
+    <desc>Introdução ao <em>Visualizador de Documentos Evince</em>.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
   <title>Introdução</title>
 
-  <p><app>Evince</app> is a document viewer. See <link xref="formats"/> for a
-  list of file types you can view.</p>
+  <p>O <app>Evince</app> é um aplicativo visualizador de documentos. Veja <link xref="formats"/> para uma lista de tipos de arquivo que você pode abrir.</p>
 
 </page>

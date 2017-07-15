@@ -3,8 +3,8 @@
 
   <info>
     <link type="guide" xref="index#advanced"/>
-    <title type="sort">Command line</title>
-    <desc>The <cmd>evince</cmd> command can open any number of files, at specific pages and in various modes.</desc>
+    <title type="sort">Linha de comando</title>
+    <desc>O comando <cmd>evince</cmd> pode abrir qualquer número de arquivos, em páginas específicas e em vários modos.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
@@ -15,47 +15,58 @@
     <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>The command line</title>
-<p>
-To start the <app>Document Viewer</app> from the command line, type <cmd>evince</cmd>. You
-can open a specific file by typing the filename after the evince command:
-</p>
+<title>A linha de comando</title>
+<p>Para iniciar o <app>Visualizador de Documentos</app> da linha de comando, use o comando <cmd>evince</cmd>. Você pode abrir um arquivo, digitando o nome do arquivo após o comando <cmd>evince</cmd>:</p>
 
-<screen>evince file.pdf</screen>
-<p>
-You can open multiple files by typing the filenames after the evince command, separating the filenames by a space:
-</p>
-<screen>evince file1.pdf file2.pdf</screen>
-<p>
-The <app>document viewer</app> also supports the handling of files on the web.  For example, after the evince command you can give the location of a file on the web:
-</p>
+<screen>evince arquivo.pdf</screen>
+<p>Você pode abrir vários arquivos, digitando os nomes de arquivos depois do comando <cmd>evince</cmd>, separando os nomes por um espaço:</p>
+<screen>evince arquivo1.pdf arquivo2.pdf</screen>
+<p>O <app>Visualizador de documentos</app> também suporta o processamento de arquivos da web. Por exemplo, após o comando <cmd>evince</cmd> você pode usar a localização de um arquivo na web:</p>
 <screen>evince http://www.claymath.org/millennium/P_vs_NP/pvsnp.pdf</screen>
 <section id="open">
-    <title>Opening a document at a specific page</title>
-    <p>
-    You can use the <cmd>--page-label</cmd> switch to open a document at a
-    specific page. For example, to open a document to page 3, you would type:
-    </p>
-    <screen>evince --page-label=3 file.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> toolbar.
-    </p>
+    <title>Abrindo um documento numa determinada página</title>
+    <p>Você pode usar o modificador <cmd>--page-label</cmd> para abrir um documento em uma página específica. Por exemplo, para abrir um documento para página 3, você deverá digitar:</p>
+    <screen>evince --page-label=3 arquivo.pdf</screen>
+    <p>O valor do argumento de <cmd>--page-label</cmd> deve ter o mesmo formato que o número da página exibido na barra de ferramentas do <app>Visualizador de documentos</app>.</p>
 </section>
 <section id="fullsreen">
-    <title>Opening a document in fullscreen mode</title>
-    <screen>evince --fullscreen file.pdf</screen>
+    <title>Abrindo um documento no modo de tela cheia</title>
+    <screen>evince --fullscreen arquivo.pdf</screen>
 </section>
 <section id="presentation">
-    <title>Opening a document in presentation mode</title>
-    <screen>evince --presentation file.pdf</screen>
+    <title>Abrindo um documento no modo de apresentação</title>
+    <screen>evince --presentation arquivo.pdf</screen>
 </section>
 <section id="preview">
-    <title>Opening a document in preview mode</title>
-    <screen>evince --preview file.pdf</screen>
+    <title>Abrindo um documento no modo de pré-visualização</title>
+    <screen>evince --preview arquivo.pdf</screen>
 </section>
 </page>

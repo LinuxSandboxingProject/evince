@@ -1,35 +1,494 @@
-commit c718196909c67d4c0b74168514ba03affa6c8972
-Author: Felipe Borges <felipeborges@gnome.org>
-Date:   2016-10-05
+commit ebe46b8a01fc85d127162e52699e16216cf27f7a
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   2017-03-17
 
-    comics: Sort pages in natural order
+    shell: Fix incorrect return type
 
-    Use g_utf8_collate_key_for_filename to convert the page filenames
-    into collation keys in order to compare using strcmp().
+    Should be a gboolean, not a pointer.
 
-    This prevents pages named such as page1, page2, page10, to be
-    sorted as page1, page10, page2...
+    https://bugzilla.gnome.org/show_bug.cgi?id=780206
 
-    https://bugzilla.gnome.org/show_bug.cgi?id=770695
+M	shell/ev-bookmarks.c
 
-M	backend/comics/comics-document.c
+commit 90d023d5bdba0f3768925cbc363d89b8117e29da
+Author: Seong-ho Cho <shcho@gnome.org>
+Date:	2017-03-19
 
-commit 66bd0fcd16495bf490b4791ae21b9c30d79ea01c
-Author: Felipe Borges <felipeborges@gnome.org>
-Date:	2016-10-01
+    Update Korean translation
 
-    shell: Sort bookmarks by page number instead of title
+M	po/ko.po
 
-    Bookmarks shouldn't be sorted by their titles but their page
-    numbers. Often titles don't have any sorting text, causing
-    strcmp to wrongly sort them alphanumerically, just like in the
-    bug referenced below.
+commit 64f79f8656e06cd0f7e34c1847a84edc385f26e8
+Author: Rūdolfs Mazurs <rudolfsm@src.gnome.org>
+Date:	2017-03-18
 
-    https://bugzilla.gnome.org/show_bug.cgi?id=772277
+    Update Latvian translation
+
+M	po/lv.po
+
+commit 08e0323bd5b48d3aedeb65211ea0e93f2fa70c7c
+Author: gogo <trebelnik2@gmail.com>
+Date:	2017-03-15
+
+    Update Croatian translation
+
+M	po/hr.po
+
+commit 635417ba7ae6eefba038e7af7daf8b1d997d611f
+Author: Luca Ferretti <lferrett@gnome.org>
+Date:	2017-03-15
+
+    Update Italian translation
+
+M	po/it.po
+
+commit 91155a3262280d2ce98541bb69525048392d3896
+Author: Milo Casagrande <milo@ubuntu.com>
+Date:	2017-03-15
+
+    Update Italian translation
+
+M	po/it.po
+
+commit abf271f7c70312b9e50e8c4edcf31c25ab0b1798
+Author: Jordi Mas <jmas@softcatala.org>
+Date:	2017-03-12
+
+    Update Catalan translation
+
+M	po/ca.po
+
+commit 546a5c60fd1082e2aa2216929ecce8be315b3105
+Author: A S Alam <aalam@users.sf.net>
+Date:	2017-03-11
+
+    updated Punjabi Translation
+
+M	po/pa.po
+
+commit 4810b95394db1ed743ef3a73231a52d21d4dde33
+Author: Fran Dieguez <frandieguez@gnome.org>
+Date:	2017-03-11
+
+    Update Galician translation
+
+M	po/gl.po
+
+commit 6d1c4f2dda48008b85be7e799653216df72d0437
+Author: Trần Ngọc Quân <vnwildman@gmail.com>
+Date:	2017-03-10
+
+    Updated Vietnamese translation
+
+    Signed-off-by: Trần Ngọc Quân <vnwildman@gmail.com>
+
+M	po/vi.po
+
+commit 8902c9d1004262860cfcd0f6d4baa9ec7138c28e
+Author: Aurimas Černius <aurisc4@gmail.com>
+Date:	2017-03-04
+
+    Updated Lithuanian translation
+
+M	po/lt.po
+
+commit 28b35a923aba2c38d345f6a1b70b43435ea96323
+Author: Rafael Fontenelle <rafaelff@gnome.org>
+Date:	2017-03-04
+
+    Update Brazilian Portuguese translation
+
+A	help/pt_BR/figures/add-text-annotation.png
+A	help/pt_BR/figures/annotations-nav-to-page.png
+A	help/pt_BR/figures/annotations-navigate.png
+A	help/pt_BR/figures/list-add-tabs.png
+A	help/pt_BR/figures/print-select.png
+A	help/pt_BR/figures/reverse-collate.png
+A	help/pt_BR/figures/zoom.png
+M	help/pt_BR/pt_BR.po
+
+commit 477256d2181a8cf22c6c11ec4e9fbf970e2ce578
+Author: Joe Hansen <joedalton2@yahoo.dk>
+Date:	2017-02-27
+
+    Updated Danish translation
+
+M	po/da.po
+
+commit e5db68bd87868827dabaabe14a718d2ce919eb6b
+Author: Joe Hansen <joedalton2@yahoo.dk>
+Date:	2017-02-27
+
+    Updated Danish translation
+
+M	po/da.po
+
+commit ffa8f15c1131147ff50af0275ff43b67409c465c
+Author: Мирослав Николић <miroslavnikolic@rocketmail.com>
+Date:	2017-02-26
+
+    Updated Serbian translation
+
+M	po/sr.po
+M	po/sr@latin.po
+
+commit e4624a08b0c628e1ba8bed7f2cbb08c3a700a0ce
+Author: Rafael Fontenelle <rafaelff@gnome.org>
+Date:	2017-02-25
+
+    Update Brazilian Portuguese translation
+
+M	po/pt_BR.po
+
+commit 0abb5018e9e4307a4ccc170f4431307a70d7ee6b
+Author: Claude Paroz <claude@2xlibre.net>
+Date:	2017-02-25
+
+    Updated French translation
+
+M	po/fr.po
+
+commit 83a519c25b54f337a8501027ffcd6866622c2dd3
+Author: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>
+Date:	2017-02-22
+
+    Update Chinese (Taiwan) translation
+
+M	po/zh_TW.po
+
+commit 7b31769578c429dd7de204a1d81f37d09ebeb0a8
+Author: Daniel Korostil <ted.korostiled@gmail.com>
+Date:	2017-02-20
+
+    Updated Ukrainian translation
+
+M	po/uk.po
+
+commit a69b84a7020718ddb61608ec230840db2f2ae66c
+Author: Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:	2017-02-19
+
+    Update Kazakh translation
+
+M	po/kk.po
+
+commit aa0a5de3f0d8a52c47b7bbeb470164793a1ee2d5
+Author: Kukuh Syafaat <syafaatkukuh@gmail.com>
+Date:	2017-02-19
+
+    Update Indonesian translation
+
+M	po/id.po
+
+commit 5c31cab4531d36d51fa23e56b38ca40de61efc5f
+Author: Ask Hjorth Larsen <asklarsen@gmail.com>
+Date:	2017-02-16
+
+    Updated Danish translation
+
+M	po/da.po
+
+commit b2ddf7a1a17663119f24c8facd1fc1bcf712ee93
+Author: Jiri Grönroos <jiri.gronroos@iki.fi>
+Date:	2017-02-15
+
+    Update Finnish translation
+
+M	po/fi.po
+
+commit 32376612585d5c5d04ec7c3ec03138c349d9f4c3
+Author: Kukuh Syafaat <syafaatkukuh@gmail.com>
+Date:	2017-02-13
+
+    Update Indonesian translation
+
+M	po/id.po
+
+commit 0f2dacc0ccacb87362182508e6fece0690230290
+Author: Inaki Larranaga Murgoitio <dooteo@zundan.com>
+Date:	2017-02-11
+
+    Update Basque language
+
+M	po/eu.po
+
+commit bfea980ade96221253edd40afcdcb68efbe5861c
+Author: Fabio Tomat <f.t.public@gmail.com>
+Date:	2017-02-02
+
+    Update Friulian translation
+
+M	po/fur.po
+
+commit c8bbc8e5ff5a84340dc0d5c9b974e4d8780128c4
+Author: Piotr Drąg <piotrdrag@gmail.com>
+Date:	2017-01-20
+
+    Update Polish translation
+
+M	po/pl.po
+
+commit dd4d2a991e1e1677f05d1e11fcd65cb8c85e13ff
+Author: Dušan Kazik <prescott66@gmail.com>
+Date:	2017-01-18
+
+    Update Slovak translation
+
+M	po/sk.po
+
+commit 1761e860aa38ff56a4046d1abb3da6c875dce07c
+Author: Dušan Kazik <prescott66@gmail.com>
+Date:	2017-01-16
+
+    Update Slovak translation
+
+M	po/sk.po
+
+commit a4b6f7ca00e08f84678e518c904f982b41fe7614
+Author: Simon Nagl <simonnagl@aim.com>
+Date:	2016-12-02
+
+    Hide search bar when entering presentation mode
+
+    Before fix:
+    1. Press Ctrl+f to display search bar
+    2. Press F5 to enter presentation mode
+    -> Search bar is still there but without feedback on the document.
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=645976 descides:
+    "Search is not supposed to work in presentation mode, so the find
+    bar shoudn't be displayed."
+
+    This commit hides the search bar before entering presentation mode.
+
+    https://bugzilla.gnome.org//show_bug.cgi?id=775536
 
 M	shell/ev-window.c
 
-commit 7dfc922c81da48b99de40355012048f32e5f09d2
+commit 932f2d0ca69aa3a75eb6598507f64ca75b96d8d0
+Author: Trinh Anh Ngoc <atw1990@gmail.com>
+Date:	2017-01-13
+
+    Wrap searchbar in a revealer
+
+    Workaround for the gtk+ bug:
+    https://bugzilla.gnome.org/show_bug.cgi?id=724096
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=777204
+
+M	shell/ev-window.c
+
+commit 7d0289fde2fd7ed195bf1496e3f2c5b4fac31b42
+Author: Stas Solovey <whats_up@tut.by>
+Date:	2016-12-27
+
+    Update Russian translation
+
+M	po/ru.po
+
+commit 32cad604d88826e954aaff9b9cb36c0a3412975e
+Author: Khaled Hosny <khaledhosny@eglug.org>
+Date:	2016-12-27
+
+    Update Arabic translation
+
+M	po/ar.po
+
+commit 0d8af2f2824c3c2c20884cd6944a6206fe5d8fcc
+Author: Jiri Grönroos <jiri.gronroos@iki.fi>
+Date:	2016-12-25
+
+    Update Finnish translation
+
+M	po/fi.po
+
+commit ac4bff3941374200bb8b6e6f723f0277e141dd50
+Author: Caolán McNamara <caolanm@redhat.com>
+Date:	2016-12-09
+
+    Don't complain about inability to copy metadata
+
+    related rhbz#1022649
+
+    nautilus just takes the view that copying metadata is a "nice
+    to have",
+    but if it doesn't work it's not a hard error so just do that
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=692552
+
+M	libview/ev-jobs.c
+
+commit 54044996935ba982272bad9ba0a9a599386dde00
+Author: Gábor Kelemen <kelemeng@openscope.org>
+Date:	2016-12-08
+
+    Update Hungarian translation
+
+M	po/hu.po
+
+commit ef41b6bcd1ef13729326d9abc7cedc257ee4b5df
+Author: Muhammet Kara <muhammetk@gmail.com>
+Date:	2016-11-28
+
+    Update Turkish translation
+
+M	po/tr.po
+
+commit c6fda1da4e0875dacf4162a70b588b7e0a67116a
+Author: Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:	2016-11-27
+
+    Update Kazakh translation
+
+M	po/kk.po
+
+commit 790293c433d6c99fb7d25cb24b868f75f5d8079d
+Author: Daniel Mustieles <daniel.mustieles@gmail.com>
+Date:	2016-11-21
+
+    Update Spanish translation
+
+M	po/es.po
+
+commit 38aba718496dc8a7a7b5b6bcf7fc94983a69ec73
+Author: Philipp Raich <philipp.raich@gmail.com>
+Date:	2016-11-13
+
+    use IBEAM cursor for TEXT_MARKUP annotations
+
+    Text markup annotations are hard with the cursor
+    used so far for annotations in general (ADD), using
+    I-Beam is better for text selection.
+
+    This patch further removes checking the currently
+    set cursor type in `ev_view_handle_cursor_over_xy`
+    while setting it, at least for creating annotations,
+    as this is taken care of by `ev_view_set_cursor`
+    already.
+
+    Setting the cursor to NORMAL in `ev_view_create_annotation`
+    is removed, as it seems superfluous and introduces wrong
+    behavior during dragging (i.e. while creating a text
+    markup annotation), and the cursor type is handled
+    by `ev_view_handle_cursor_over_xy` already.
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=774018
+
+M	libview/ev-view.c
+
+commit 2e4f43cea718aeb4c225e0c900da489c34f346e3
+Author: Kjartan Maraas <kmaraas@gnome.org>
+Date:	2016-11-21
+
+    Updated Norwegian bokmål translation.
+
+M	po/nb.po
+
+commit 6bdfa846bacac2ca8a268d28b2ddc668ad8776bf
+Author: Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>
+Date:	2016-11-11
+
+    Update German translation
+
+M	po/de.po
+
+commit ecb10e3c754ff80368d1af570f8009a2eb5bf06f
+Author: Marek Cernocky <marek_cernocky@conel.cz>
+Date:	2016-11-08
+
+    Updated Czech translation
+
+M	po/cs.po
+
+commit e94d6cf3307f801376d5b3bbb160e9ea708a2515
+Author: Daniel Mustieles <daniel.mustieles@gmail.com>
+Date:	2016-11-07
+
+    Update Spanish translation
+
+M	po/es.po
+
+commit b6582d4c01caaded8bfecfd9db6101562f213679
+Author: Charles Monzat <superboa@hotmail.fr>
+Date:	2016-11-07
+
+    Update French translation
+
+M	po/fr.po
+
+commit 123beb3b74b3d4cd183b93e054f8ecd5a14a5c47
+Author: Fabio Tomat <f.t.public@gmail.com>
+Date:	2016-11-06
+
+    Update Friulian translation
+
+M	po/fur.po
+
+commit c9e68a5aa4e6e299beefdf4fe8ef384c73a458db
+Author: Anders Jonsson <anders.jonsson@norsjovallen.se>
+Date:	2016-11-06
+
+    Update Swedish translation
+
+M	po/sv.po
+
+commit 52f560582d74824246dccd18f5e9919e5d265e1c
+Author: Piotr Drąg <piotrdrag@gmail.com>
+Date:	2016-11-06
+
+    Use Unicode in translatable strings
+
+    See https://developer.gnome.org/hig/stable/typography.html
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=774005
+
+M	backend/comics/comics-document.c
+M	libdocument/ev-attachment.c
+M	libview/ev-print-operation.c
+M	previewer/ev-previewer-window.c
+M	shell/ev-window.c
+
+commit 75f9b0225c1691c9ffecfc5ca6d51fa0b7874e0c
+Author: Antonio Fernandes C. Neto <fernandesn@gnome.org>
+Date:	2016-11-04
+
+    Update Brazilian Portuguese translation
+
+M	po/pt_BR.po
+
+commit c7b0f51a5f5a11fb43c89f1641216e8282930fab
+Author: Gábor Kelemen <kelemeng@openscope.org>
+Date:	2016-10-30
+
+    Update Hungarian translation
+
+M	po/hu.po
+
+commit 4f488b80484ecd3128b8b6dc2899fc09bebb2031
+Author: hosiet <073plan@gmail.com>
+Date:	2016-10-30
+
+    Update zh_CN translation
+
+M	po/zh_CN.po
+
+commit 9c25e574df4de8b3d52725cc97d34d01c6ec3c56
+Author: Marek Černocký <marek@manet.cz>
+Date:	2016-10-28
+
+    Updated Czech translation
+
+M	po/cs.po
+
+commit 35e4bfc6f31ef017bc18eda93c1dd16e82ecf5d2
+Author: Fabio Tomat <f.t.public@gmail.com>
+Date:	2016-10-25
+
+    Update Friulian translation
+
+M	po/fur.po
+
+commit 0d44134d7b28dca7953e48b6d7ceb01ecdea0dc7
 Author: Tobias Mueller <muelli@cryptobitch.de>
 Date:	2016-10-07
 
@@ -45,21 +504,131 @@ Date:	2016-10-07
 
 M	libview/ev-view.c
 
-commit ff1aa85d276e629dce99ec7afa73d6282788f489
+commit 3b6e754bcedf3316627a19b9207823d57cb29ccb
 Author: Sveinn í Felli <sv1@fellsnet.is>
 Date:	2016-10-11
 
     Update Icelandic translation
+    (cherry picked from commit ff1aa85d276e629dce99ec7afa73d6282788f489)
 
 M	po/is.po
 
-commit b801fc965ad7aac95601b325ac471930b295f001
+commit 6bf9ef76e99d4d124d9dce124b4530db7ff21884
 Author: Theppitak Karoonboonyanan <theppitak@gmail.com>
 Date:	2016-10-09
 
     Updated Thai translation
 
 M	po/th.po
+
+commit 3cace5764f63278b1ee778a6a770fdeb18675960
+Author: Felipe Borges <felipeborges@gnome.org>
+Date:	2016-10-05
+
+    comics: Sort pages in natural order
+
+    Use g_utf8_collate_key_for_filename to convert the page filenames
+    into collation keys in order to compare using strcmp().
+
+    This prevents pages named such as page1, page2, page10, to be
+    sorted as page1, page10, page2...
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=770695
+
+M	backend/comics/comics-document.c
+
+commit a3233e4c57901413c072f581c4a26dc534a1b450
+Author: Felipe Borges <felipeborges@gnome.org>
+Date:	2016-10-05
+
+    Revert "comics: Sort pages in natural order"
+
+    This reverts commit 3977c033b538a2a6a25214d1a4891b40dfebcae6.
+
+    Evince doesn't use gnulib, so the changes proposed on this patch
+    don't apply to non-glibc platforms.
+
+M	backend/comics/comics-document.c
+
+commit fa19890508162c78a23de5d7c43e7456696549b9
+Author: Felipe Borges <felipeborges@gnome.org>
+Date:	2016-10-01
+
+    shell: Sort bookmarks by page number instead of title
+
+    Bookmarks shouldn't be sorted by their titles but their page
+    numbers. Often titles don't have any sorting text, causing
+    strcmp to wrongly sort them alphanumerically, just like in the
+    bug referenced below.
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=772277
+
+M	shell/ev-window.c
+
+commit 3977c033b538a2a6a25214d1a4891b40dfebcae6
+Author: Felipe Borges <felipeborges@gnome.org>
+Date:	2016-09-09
+
+    comics: Sort pages in natural order
+
+    Evince was sorting pages in lexicographic order. In doing so, often
+    files named page1, page2, ..., page9, page10, ... to be sorted as
+    page1, page10, ..., page2.
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=770695
+
+M	backend/comics/comics-document.c
+
+commit c81068462660fd14724f5931397b01c96b78a540
+Author: Trần Ngọc Quân <vnwildman@gmail.com>
+Date:	2016-10-02
+
+    Updated Vietnamese translation
+
+    Signed-off-by: Trần Ngọc Quân <vnwildman@gmail.com>
+
+M	po/vi.po
+
+commit 66ee1abc108951680432cb7b12d4786a6736000e
+Author: Anders Jonsson <anders.jonsson@norsjovallen.se>
+Date:	2016-09-28
+
+    Updated Swedish translation
+
+M	po/sv.po
+
+commit d4b76d5ca904d5dc28d3f96d35fbb63e9d5c2874
+Author: Jose Aliste <jaliste@src.gnome.org>
+Date:	2016-07-23
+
+    view: Don't look for annotation windows twice
+
+    The only way to create an annotation window is through
+    create_annotation_window. As this function always set
+    the annot_window_map, we can always use this map to get the annotation
+    window.
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=760299
+
+M	libview/ev-view.c
+
+commit dd0b4a2f7a430ca2c819514d879018fb1f78f871
+Author: Piotr Drąg <piotrdrag@gmail.com>
+Date:	2016-09-28
+
+    Fix typo in a new string ("permantly")
+
+M	shell/ev-window.c
+
+commit 1914112be4bc604a564eb97c0f891fb0e86354b3
+Author: Jose Aliste <jaliste@src.gnome.org>
+Date:	2016-07-30
+
+    shell: ask before reload if the document has been modified
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=769123
+
+M	shell/ev-window.c
 
 commit f1823e583f37c9e842a7b6270cff29cac7999581
 Author: gogo <trebelnik2@gmail.com>
@@ -24953,7 +25522,7 @@ Date:	2010-12-20
 M	po/vi.po
 
 commit da96134063e3f80a2774167a951225ff6924e0fd
-Merge: 85d7647 054d355
+Merge: 85d76475 054d355c
 Author: Tiffany Antopolski <antopolski@src.gnome.org>
 Date:	2010-12-20
 
@@ -25436,7 +26005,7 @@ Date:	2010-11-18
 D	help/Makefile
 
 commit d6a02d14c7ae7e3f3a01d2d025324889bedf2275
-Merge: aa371ae 08a644b
+Merge: aa371ae2 08a644b2
 Author: Tiffany Antopolski <antopolski@src.gnome.org>
 Date:	2010-11-18
 
@@ -26779,7 +27348,7 @@ Date:	2010-09-10
 M	libview/ev-view.c
 
 commit 1034436d36e173bbfa374c64f94371f0579d6ff6
-Merge: 58efe03 71cc5e5
+Merge: 58efe036 71cc5e5d
 Author: Federico Mena Quintero <federico@novell.com>
 Date:	2010-09-13
 

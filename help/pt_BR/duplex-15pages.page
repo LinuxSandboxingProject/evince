@@ -4,7 +4,7 @@
   <info>
     <link type="guide" xref="print-booklet#doubleSided"/>
 
-    <desc>Print a 15 page booklet.</desc>
+    <desc>Imprimir um livreto de 15 páginas.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -12,33 +12,49 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons Compartilhada Igual 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Hugo Dória</mal:name>
+      <mal:email>hugodoria@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Pedro de Medeiros</mal:name>
+      <mal:email>pedrovmm+l10n@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel S. Koda</mal:name>
+      <mal:email>danielskoda@gmail.com</mal:email>
+      <mal:years>2008</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
-<title>15-page booklet</title>
+<title>Livreto de 15 páginas</title>
 
 
-   <p>
-    It is easier to print a 16-page booklet.  You may wish to add a blank page to your PDF document to make it 16-pages.  To do so, you can:
-   </p>
+   <p>É bem mais fácil imprimir um livreto de 16 páginas. Você pode adicionar uma página em branco no final de seu documento PDF para fazê-lo ficar com 16 páginas. Para fazer isso, você deve:</p>
 <steps>
  <item>
-  <p>
-    Create a blank PDF using <app>LibreOffice Writer</app>.
-  </p>
+  <p>Criar um documento PDF em branco usando o <app>LibreOffice Writer</app>.</p>
  </item>
  <item>
-  <p>
-   Merge the blank page with your PDF document using <app>PDF-Shuffler</app> placing the blank page at the end.
-  </p>
+  <p>Juntar seu documento PDF com o documento em branco gerado no passo anterior no <app>PDF-Shuffler</app>, colocando a página em branco no final.</p>
 
  </item>
  <item>
-  <p>
-   Follow the steps for printing a <link xref="duplex-16page">16-page booklet</link>.
-  </p>
+  <p>Seguir as instruções para imprimir um <link xref="duplex-16page">livreto de 16 páginas</link>.</p>
 
  </item>
 </steps>
