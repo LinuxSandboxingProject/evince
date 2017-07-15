@@ -21,7 +21,7 @@
 
 //todo: set this flag in makefile
 #define HAVE_LIBSECCOMP
-#define USE_PROTECTEDVIEW
+//#define USE_PROTECTEDVIEW
 
 #ifdef USE_PROTECTEDVIEW
 #ifndef HAVE_LIBSECCOMP
