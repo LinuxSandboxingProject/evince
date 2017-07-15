@@ -162,6 +162,7 @@ int protectedView(void){
     ALLOW_RULE (clone);
     ALLOW_RULE (close);
     ALLOW_RULE (connect);
+      ALLOW_RULE (dup2);
     ALLOW_RULE (eventfd2);
     ALLOW_RULE (exit);
     ALLOW_RULE (exit_group);
@@ -175,8 +176,13 @@ int protectedView(void){
     ALLOW_RULE (getdents);
     ALLOW_RULE (getegid);
     ALLOW_RULE (geteuid);
+      ALLOW_RULE (getgid);
+      ALLOW_RULE (getuid);
     ALLOW_RULE (getpid);
+      ALLOW_RULE (getppid);
     ALLOW_RULE (getpeername);
+      ALLOW_RULE (getpgrp);
+      ALLOW_RULE (getrandom);
     ALLOW_RULE (getresgid);
     ALLOW_RULE (getresuid);
     ALLOW_RULE (getrlimit);
@@ -194,6 +200,7 @@ int protectedView(void){
     ALLOW_RULE (mprotect);
     ALLOW_RULE (munmap);
     //ALLOW_RULE (open);
+      ALLOW_RULE (pipe);
     ALLOW_RULE (poll);
     ALLOW_RULE (prctl);
     ALLOW_RULE (pread64);
@@ -218,14 +225,16 @@ int protectedView(void){
     //ALLOW_RULE (socket);
     ALLOW_RULE (stat);
     ALLOW_RULE (statfs);
+      ALLOW_RULE (sysinfo);
     ALLOW_RULE (uname);
+      ALLOW_RULE (wait4);
     ALLOW_RULE (write);
     ALLOW_RULE (writev);
 
     //link
     //unlink
 
-    // needed for save copy, (writing new files)
+    // needed for save copy, (writing new files) -- to be reviewed
 
     ALLOW_RULE (flistxattr);
     ALLOW_RULE (getcwd);
@@ -236,7 +245,7 @@ int protectedView(void){
     ALLOW_RULE (readlink);
     ALLOW_RULE (rmdir);
     ALLOW_RULE (splice);
-    ALLOW_RULE (sysinfo);
+
     ALLOW_RULE (unlink);
     ALLOW_RULE (utimes);
 
